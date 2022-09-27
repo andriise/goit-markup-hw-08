@@ -1,0 +1,59 @@
+.ideology {
+    padding-bottom: 0;
+
+    &__title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: calc(16 / 14);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+    
+        }
+    
+        &-container {
+            display: flex;
+            align-items: center;
+    
+        }
+    
+        &__title,
+        &__text {
+    
+            flex-wrap: wrap;
+    
+        }
+    
+        &__list {
+    
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+    
+        }
+    
+         &__item {
+            flex-basis: calc((100% - 90px) / 4);
+        }
+    
+        &__text {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+            letter-spacing: 0.03em;
+            color: var(--grey-txt-clr);
+        }
+    
+        &-thumb {
+            height: 120px;
+            background-color: var(--light-grey-clr);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+}
+
+

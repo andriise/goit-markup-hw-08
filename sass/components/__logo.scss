@@ -1,0 +1,25 @@
+.logo,
+.logo:focus {
+    font-family: var(--logo-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+    color: var(--dark-clr);
+    text-decoration: none;
+    list-style: none;
+    margin-right: 92px;
+}
+
+
+
+.web {
+    color: var(--main-clr);
+}
+
+.footer-logo {
+    color: var(--light-txt-clr);
+    display: inline-block;
+    margin-bottom: 20px;
+    font-style: normal;
+}

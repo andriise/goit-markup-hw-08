@@ -1,0 +1,26 @@
+:root {
+    /* Кольори макету */
+
+    --main-clr: #2196F3;
+    --dark-grey-clr: #2F313A;
+    --light-clr: #F5F5F5;
+    --light-grey-clr: #F5F4FA;
+    --grey-txt-clr: #757575;
+    --dark-txt-clr: #212121;
+    --light-txt-clr: #FFFFFF;
+    --foot-grey-clr: rgba(255, 255, 255, 0.6);
+    --dark-clr: #000000;
+    --btn-active: #188CE8;
+    --icon-color: #AFB1B8;
+
+
+    /* Шрифти макету */
+
+    --main-font: 'Roboto',
+        sans-serif;
+    --logo-font: 'Raleway',
+        sans-serif;
+
+    /* Animation */
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,32 @@
+.subscribe {
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        color: var(--light-txt-clr);
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+
+    }
+
+    &__link {
+        background-color: rgba(255, 255, 255, 0.1);
+        fill: var(--light-txt-clr);
+
+    }
+
+
+
+}
+

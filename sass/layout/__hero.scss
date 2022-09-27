@@ -1,0 +1,35 @@
+.hero {
+    background-color: var(--dark-grey-clr);
+    padding: 200px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-position: center;
+
+    &-title {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: calc(60 / 44);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--light-txt-clr);
+        flex-wrap: wrap;
+        width: 696px;
+        margin: 0 auto 30px;
+    
+    
+        }
+
+&-btn {
+    width: 216px;
+}
+}
+
+
+
+
+
