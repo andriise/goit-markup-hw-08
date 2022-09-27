@@ -1,5 +1,10 @@
 .ideology {
   padding-bottom: 0;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 
   &__title {
     font-weight: 700;

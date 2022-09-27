@@ -1,11 +1,18 @@
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .container {
-  width: 1200px;
+  width: 480px;
   padding: 0 15px;
-  margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .main {
@@ -16,11 +23,15 @@
 
 .title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }
 
 .btn {

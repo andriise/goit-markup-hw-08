@@ -1,16 +1,30 @@
 .clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__list {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     padding: 0;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   }
 
   &__link {
     display: flex;
     height: 92px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -18,10 +32,27 @@
     border: 1px solid var(--icon-color);
     border-radius: 4px;
     transition: border var(--anim), fill var(--anim);
+    padding: 16px 52px;
+
+    @media screen and (min-width: 480px) {
+      padding: 16px 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 16px 32px;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 150px) / 6);
+    flex-basis: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 150px) / 6);
+    }
   }
 
   &__link:hover,

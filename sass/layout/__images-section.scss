@@ -1,4 +1,10 @@
 .images {
+display: none;
+
+@media screen and (min-width: 1200px) {
+  display: block;
+}
+
   &-container {
     display: flex;
     flex-direction: column;
