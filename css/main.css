@@ -155,12 +155,20 @@ img {
   color: var(--dark-clr);
   text-decoration: none;
   list-style: none;
-  margin-right: 92px;
+  margin-right: auto;
+  padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .logo,
+.logo:focus {
+    padding: 25px 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .logo,
 .logo:focus {
     font-size: 26px;
+    margin-right: 92px;
   }
 }
 
@@ -328,17 +336,31 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-top: 64px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mobile-social {
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.2222222222;
   letter-spacing: 0.02em;
   color: var(--main-clr);
+  margin-right: 10px;
+}
+.mobile-social:hover, .mobile-social:focus {
+  color: var(--btn-active);
+}
+
+.mobile-socials__item::after {
+  content: "";
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .header {
@@ -351,7 +373,6 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .header-container {
-  padding: 16px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,11 +381,6 @@ img {
           align-items: center;
   margin-right: auto;
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .header-container {
-    padding: 0 15px;
-  }
 }
 
 .nav {
@@ -423,6 +439,15 @@ img {
   display: flex;
   gap: 50px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
 
 .header__link {
   display: none;
@@ -447,6 +472,13 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .header__link:hover, .header__link:focus {

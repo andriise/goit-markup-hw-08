@@ -8,15 +8,10 @@
   border-bottom: 1px solid #ececec;
 
   &-container {
-    padding: 16px 15px;
     display: flex;
     align-items: center;
     margin-right: auto;
     position: relative;
-
-    @media screen and (min-width: 768px) {
-      padding: 0 15px;
-    }
   }
 }
 
@@ -75,6 +70,11 @@
   padding: 0;
   display: flex;
   gap: 50px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .header__link {
@@ -94,6 +94,12 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &:hover,

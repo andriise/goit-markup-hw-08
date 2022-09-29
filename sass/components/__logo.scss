@@ -8,10 +8,16 @@
   color: var(--dark-clr);
   text-decoration: none;
   list-style: none;
-  margin-right: 92px;
+  margin-right: auto;
+  padding: 16px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 25px 0;
+  }
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
+    margin-right: 92px;
   }
 }
 
