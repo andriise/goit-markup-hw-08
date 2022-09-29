@@ -21,10 +21,10 @@
   </head>
   <body class="main">
     <!-- Шапка сайту -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
+        <a href="" class="logo"><span class="web">Web</span>Studio</a>
         <nav class="nav">
-          <a href="" class="logo"><span class="web">Web</span>Studio</a>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="./index.html" class="nav__link current">Студія</a>
@@ -51,8 +51,18 @@
             >
           </li>
         </ul>
+        <button
+          class="menu_btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#mb_menu_open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <!-- Основний контент -->
     <main>
       <!--Вступне відео-->
@@ -175,8 +185,8 @@
               <div class="team-block">
                 <h3 class="team-name">Ігор Дем'яненко</h3>
                 <p class="team__text">Product Designer</p> -->
-                <!-- ІКОНКИ -->
-                <!-- <ul class="team-icon__list">
+      <!-- ІКОНКИ -->
+      <!-- <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -233,8 +243,8 @@
               <div class="team-block">
                 <h3 class="team-name">Ольга Рєпіна</h3>
                 <p class="team__text">Frontend Developer</p> -->
-                <!-- ІКОНКИ -->
-                <!-- <ul class="team-icon__list">
+      <!-- ІКОНКИ -->
+      <!-- <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -291,8 +301,8 @@
               <div class="team-block">
                 <h3 class="team-name">Микола Тарасов</h3>
                 <p class="team__text">Marketing</p> -->
-                <!-- ІКОНКИ -->
-                <!-- <ul class="team-icon__list">
+      <!-- ІКОНКИ -->
+      <!-- <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -349,8 +359,8 @@
               <div class="team-block">
                 <h3 class="team-name">Михайло Єрмаков</h3>
                 <p class="team__text">UI Designer</p> -->
-                <!-- ІКОНКИ -->
-                <!-- <ul class="team-icon__list">
+      <!-- ІКОНКИ -->
+      <!-- <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -406,7 +416,7 @@
         </div>
       </section> -->
       <!-- ПОСТІЙНІ КЛІЄНТИ -->
-      <section class="clients section">
+      <!-- <section class="clients section">
         <div class="container">
           <h2 class="title">Постійні клієнти</h2>
           <ul class="clients__list">
@@ -454,10 +464,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- ФУТЕР -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
         <address class="footer__address">
           <a href="" class="logo footer-logo"
@@ -537,9 +547,9 @@
               </a>
             </li>
           </ul>
-        </div> -->
-        <!-- ФОРМА РОЗСИЛКИ -->
-        <!-- <div class="footer-mail">
+        </div>
+    <!-- ФОРМА РОЗСИЛКИ -->
+    <div class="footer-mail">
           <h2 class="subscribe__title">Підпишіться на розсилку</h2>
           <form class="footer-mail__form">
             <input
@@ -557,7 +567,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- MODAL WINDOW -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -642,6 +652,64 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu modal -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-container-close__btn js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#close-svg"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item">
+            <a href="./index.html" class="mobile-nav__link current">Студія</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="./portfolio.html" class="mobile-nav__link">Портфоліо</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="" class="mobile-nav__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-thumb">
+        <ul class="mobile__list">
+          <li class="mobile__item">
+            <a href="tel:+380961111111" class="mobile__link mobile__tel"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile__item">
+            <a href="mailto:info@devstudio.com" class="mobile__link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-social">Instagram</a>
+          </li>
+
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-social">Twitter</a>
+          </li>
+
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-social">Facebook</a>
+          </li>
+
+          <li><a href="" class="mobile-social">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -84,6 +84,9 @@
       <path fill="#2196f3" style="fill:var(--color1, #2196f3)" d="M4.267 0h25.6a4.267 4.267 0 0 1 4.267 4.267v23.467a4.267 4.267 0 0 1-4.267 4.267h-25.6A4.267 4.267 0 0 1 0 27.734V4.267A4.267 4.267 0 0 1 4.267 0z"/>
       <path fill="#fff" style="fill:var(--color2, #fff);stroke:var(--color2, #fff)" stroke="#fff" stroke-width=".427" d="m8.442 16.537-.147-.14-2.205 2.088 7.767 7.41 16.318-15.567-2.19-2.089-14.128 13.465-5.416-5.167z"/>
     </symbol>
+    <symbol id="mb_menu_open" viewBox="0 0 32 32">
+      <path d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
+    </symbol>
   </defs>
 </svg>
 

@@ -29,10 +29,13 @@ p,
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -146,13 +149,19 @@ img {
 .logo:focus {
   font-family: var(--logo-font);
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.1923076923;
   letter-spacing: 0.03em;
   color: var(--dark-clr);
   text-decoration: none;
   list-style: none;
   margin-right: 92px;
+}
+@media screen and (min-width: 1200px) {
+  .logo,
+.logo:focus {
+    font-size: 26px;
+  }
 }
 
 .web {
@@ -166,6 +175,172 @@ img {
   font-style: normal;
 }
 
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  background-color: var(--light-txt-clr);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform var(--anim);
+  transition: -webkit-transform var(--anim);
+  transition: transform var(--anim);
+  transition: transform var(--anim), -webkit-transform var(--anim);
+}
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.menu-container-close__btn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: fill var(--anim);
+  transition: fill var(--anim);
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+}
+.menu-container-close__btn:hover, .menu-container-close__btn:focus {
+  fill: var(--main-clr);
+}
+
+.menu_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu_btn {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+}
+.mobile-nav__list, .mobile-nav__list:focus {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.mobile-nav__list,
+.mobile__list {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+}
+
+.mobile__item {
+  padding: 0;
+}
+
+.mobile-nav__link {
+  font-size: 40px;
+  text-decoration: none;
+  color: var(--dark-txt-clr);
+  position: relative;
+  -webkit-transition: color var(--anim);
+  transition: color var(--anim);
+}
+.mobile-nav__link:hover, .mobile-nav__link:focus {
+  color: var(--main-clr);
+}
+.mobile-nav__link.current {
+  color: var(--main-clr);
+}
+
+.mobile__link {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--grey-txt-clr);
+  -webkit-transition: color var(--anim);
+  transition: color var(--anim);
+}
+.mobile__link:hover, .mobile__link:focus {
+  color: var(--main-clr);
+}
+.mobile__link.current {
+  color: var(--main-clr);
+}
+
+.mobile__tel {
+  font-size: 34px;
+}
+
+.mobile-thumb {
+  margin-top: auto;
+}
+
+.mobile-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-top: 64px;
+}
+
+.mobile-social {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--main-clr);
+}
+
 .header {
   background-color: var(--light-txt-clr);
   font-weight: 500;
@@ -175,8 +350,24 @@ img {
   font-family: var(--main-font);
   border-bottom: 1px solid #ececec;
 }
-.header-container,
-.header .nav {
+.header-container {
+  padding: 16px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+}
+
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,22 +376,18 @@ img {
           align-items: center;
   margin-right: auto;
 }
-.header__list, .header__list:focus {
+.nav__list, .nav__list:focus {
   list-style: none;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   gap: 50px;
 }
-
-.nav__list {
-  list-style: none;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
+@media screen and (min-width: 768px) {
+  .nav__list, .nav__list:focus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .nav__link {
@@ -228,10 +415,17 @@ img {
   border-radius: 2px;
 }
 
-.header__link {
+.header__list {
+  list-style: none;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 50px;
+}
+
+.header__link {
+  display: none;
   gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -247,6 +441,13 @@ img {
   padding: 32px 0;
   -webkit-transition: color var(--anim), fill var(--anim);
   transition: color var(--anim), fill var(--anim);
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .header__link:hover, .header__link:focus {
   color: var(--main-clr);
