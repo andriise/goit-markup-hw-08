@@ -16,17 +16,26 @@
 
   &-title {
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: calc(60 / 44);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--light-txt-clr);
-    flex-wrap: wrap;
-    width: 696px;
+
+    max-width: 696px;
     margin: 0 auto 30px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 360px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      max-width: 696px;
+    }
   }
 
   &-btn {
-    width: 216px;
+    max-width: 216px;
   }
 }

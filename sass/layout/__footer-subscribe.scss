@@ -1,4 +1,18 @@
 .subscribe {
+margin: 0 auto;
+
+
+
+@media screen and (min-width: 768px) {
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  margin: 0;
+  margin-right: auto;
+}
+
   &__title {
     text-transform: uppercase;
     font-weight: 700;
@@ -7,6 +21,13 @@
     letter-spacing: 0.03em;
     color: var(--light-txt-clr);
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
   }
 
   &__list {

@@ -17,7 +17,6 @@
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
-    margin-right: 92px;
   }
 }
 
@@ -28,6 +27,15 @@
 .footer-logo {
   color: var(--light-txt-clr);
   display: inline-block;
+  margin: 0 auto;
   margin-bottom: 20px;
   font-style: normal;
+  padding: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
 }
