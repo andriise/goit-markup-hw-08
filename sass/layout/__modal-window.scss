@@ -1,5 +1,6 @@
 .backdrop {
   position: fixed;
+  padding: 0 15px;
   top: 0;
   left: 0;
   width: 100%;
@@ -7,6 +8,10 @@
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: opacity var(--anim), visibility var(--anim);
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
 }
 
 .backdrop.is-hidden {
@@ -21,7 +26,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 4px;
-  width: 528px;
+  min-width: 450px;
   background-color: var(--light-txt-clr);
   padding: 40px;
 
@@ -160,19 +165,27 @@
 
   &-checkbox__text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.03em;
     user-select: none;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
   }
 
   &-checkbox__link {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--main-clr);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
   }
 }
 

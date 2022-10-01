@@ -1,11 +1,5 @@
 .ideology {
   padding-bottom: 0;
-  margin-bottom: 60px;
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 0;
-  }
-
   &__title {
     font-weight: 700;
     font-size: 14px;
@@ -18,11 +12,17 @@
   &-container {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  &__title,
-  &__text {
-    flex-wrap: wrap;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      justify-content: start;
+    }
   }
 
   &__list {
@@ -30,10 +30,23 @@
     display: flex;
     gap: 30px;
     padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
   }
 
   &__text {
@@ -51,5 +64,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      min-width: 300px;
+    }
   }
 }

@@ -243,6 +243,8 @@ img {
   right: 15px;
   width: 40px;
   height: 40px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 .menu-container-close__btn:hover, .menu-container-close__btn:focus {
   fill: var(--main-clr);
@@ -503,14 +505,44 @@ img {
   background-color: var(--dark-grey-clr);
   padding: 200px 0;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_photo.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_photo.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-sm.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-sm.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
   background-position: center;
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_sm@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_sm@2x.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_md@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_md@2x.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_lg@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_lg@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-md.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-md.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-lg.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-lg.jpg);
+  }
 }
 .hero-title {
   font-weight: 900;
@@ -539,12 +571,6 @@ img {
 
 .ideology {
   padding-bottom: 0;
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .ideology {
-    margin-bottom: 0;
-  }
 }
 .ideology__title {
   font-weight: 700;
@@ -561,10 +587,27 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.ideology__title, .ideology__text {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.ideology__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .ideology__title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 .ideology__list {
   list-style: none;
@@ -573,10 +616,35 @@ img {
   display: flex;
   gap: 30px;
   padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.ideology__item {
-  -ms-flex-preferred-size: calc((100% - 90px) / 4);
-      flex-basis: calc((100% - 90px) / 4);
+@media screen and (min-width: 768px) {
+  .ideology__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ideology__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ideology__item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
+  }
 }
 .ideology__text {
   font-size: 14px;
@@ -598,6 +666,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ideology-thumb {
+    min-width: 300px;
+  }
 }
 
 .images {
@@ -676,6 +749,20 @@ img {
   display: flex;
   gap: 30px;
   padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .team-block {
   padding: 30px 0;
@@ -684,8 +771,33 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: 270px;
+  max-width: 100%;
   background-color: var(--light-txt-clr);
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    max-width: 270px;
+  }
+}
+.team__image {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team__image {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__image {
+    width: 270px;
+  }
 }
 .team-name {
   font-weight: 500;
@@ -1228,6 +1340,7 @@ img {
 
 .backdrop {
   position: fixed;
+  padding: 0 15px;
   top: 0;
   left: 0;
   width: 100%;
@@ -1236,6 +1349,11 @@ img {
   z-index: 1000;
   -webkit-transition: opacity var(--anim), visibility var(--anim);
   transition: opacity var(--anim), visibility var(--anim);
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 0;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1251,7 +1369,7 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 4px;
-  width: 528px;
+  min-width: 450px;
   background-color: var(--light-txt-clr);
   padding: 40px;
 }
@@ -1419,7 +1537,7 @@ img {
 }
 .modal-checkbox__text {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.03em;
   -webkit-user-select: none;
@@ -1427,14 +1545,24 @@ img {
       -ms-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 1200px) {
+  .modal-checkbox__text {
+    font-size: 14px;
+  }
+}
 .modal-checkbox__link {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--main-clr);
+}
+@media screen and (min-width: 1200px) {
+  .modal-checkbox__link {
+    font-size: 14px;
+  }
 }
 
 .send-btn {

@@ -75,7 +75,7 @@
         </div>
       </section>
       <!--Перелік гарних рис-->
-      <!-- <section class="ideology section">
+      <section class="ideology section">
         <div class="container ideology-container">
           <h2 class="visually-hidden">Яка наша ідеологія</h2>
           <ul class="ideology__list">
@@ -130,7 +130,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Картинки чим займаємося-->
       <section class="images section">
         <div class="container images-container">
@@ -138,11 +138,29 @@
           <ul class="images__list">
             <li class="images__item">
               <div class="images-thumb">
-                <img
-                  src="./images/box1.jpg"
-                  alt="Верстка на комп'ютері"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/images_section/box1.webp    1x,
+                      ./images/images_section/box1-2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/images_section/box1.jpg    1x,
+                      ./images/images_section/box1-2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/images_section/box1.jpg"
+                    alt="Верстка на комп'ютері"
+                    width="370"
+                  />
+                </picture>
                 <div class="images-overlay">
                   <p class="images__text">Десктопні додатки</p>
                 </div>
@@ -150,11 +168,29 @@
             </li>
             <li>
               <div class="images-thumb">
-                <img
-                  src="./images/box2.jpg"
-                  alt="Мобільні додатки"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/images_section/box2.webp    1x,
+                      ./images/images_section/box2-2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/images_section/box2.jpg    1x,
+                      ./images/images_section/box2-2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/images_section/box2.jpg"
+                    alt="Верстка на комп'ютері"
+                    width="370"
+                  />
+                </picture>
                 <div class="images-overlay">
                   <p class="images__text">Мобільні додатки</p>
                 </div>
@@ -162,11 +198,29 @@
             </li>
             <li>
               <div class="images-thumb">
-                <img
-                  src="./images/box3.jpg"
-                  alt="Дизайнерські рішення"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/images_section/box3.webp    1x,
+                      ./images/images_section/box3-2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/images_section/box3.jpg    1x,
+                      ./images/images_section/box3-2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/images_section/box3.jpg"
+                    alt="Верстка на комп'ютері"
+                    width="370"
+                  />
+                </picture>
                 <div class="images-overlay">
                   <p class="images__text">Дизайнерські рішення</p>
                 </div>
@@ -176,17 +230,75 @@
         </div>
       </section>
       <!--ЛЮДИ В КОМАНДІ-->
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container team-container">
           <h2 class="title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/man1.jpg" alt="" width="270" height="260" />
+              <picture>
+                <!-- Mobile -->
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./images/team/man1_sm@1x.jpg 1x,
+                    ./images/team/man1_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 320px)"
+                  srcset="
+                    ./images/team/man1_sm@1x.webp 1x,
+                    ./images/team/man1_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man1_md@1x.webp 1x,
+                    ./images/team/man1_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man1_md@1x.jpg 1x,
+                    ./images/team/man1_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man1@1x.webp 1x,
+                    ./images/team/man1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man1@1x.jpg 1x,
+                    ./images/team/man1@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/man1@1x.webp"
+                  alt=""
+
+                />
+              </picture>
               <div class="team-block">
                 <h3 class="team-name">Ігор Дем'яненко</h3>
-                <p class="team__text">Product Designer</p> -->
-      <!-- ІКОНКИ -->
-      <!-- <ul class="team-icon__list">
+                <p class="team__text">Product Designer</p>
+                <!-- ІКОНКИ -->
+                <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -239,12 +351,70 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/women1.jpg" alt="" width="270" height="260" />
+              <picture>
+                <!-- Mobile -->
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./images/team/man2_sm@1x.jpg 1x,
+                    ./images/team/man2_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 320px)"
+                  srcset="
+                    ./images/team/man2_sm@1x.webp 1x,
+                    ./images/team/man2_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man2_md@1x.webp 1x,
+                    ./images/team/man2_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man2_md@1x.jpg 1x,
+                    ./images/team/man2_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man2@1x.webp 1x,
+                    ./images/team/man2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man2@1x.jpg 1x,
+                    ./images/team/man2@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/man2@1x.webp"
+                  alt=""
+
+                />
+              </picture>
               <div class="team-block">
                 <h3 class="team-name">Ольга Рєпіна</h3>
-                <p class="team__text">Frontend Developer</p> -->
-      <!-- ІКОНКИ -->
-      <!-- <ul class="team-icon__list">
+                <p class="team__text">Frontend Developer</p>
+                <!-- ІКОНКИ -->
+                <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -297,12 +467,70 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/man2.jpg" alt="" width="270" height="260" />
+              <picture>
+                <!-- Mobile -->
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./images/team/man3_sm@1x.jpg 1x,
+                    ./images/team/man3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 320px)"
+                  srcset="
+                    ./images/team/man3_sm@1x.webp 1x,
+                    ./images/team/man3_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man3_md@1x.webp 1x,
+                    ./images/team/man3_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man3_md@1x.jpg 1x,
+                    ./images/team/man3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man3@1x.webp 1x,
+                    ./images/team/man3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man3@1x.jpg 1x,
+                    ./images/team/man3@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/man3@1x.webp"
+                  alt=""
+
+                />
+              </picture>
               <div class="team-block">
                 <h3 class="team-name">Микола Тарасов</h3>
-                <p class="team__text">Marketing</p> -->
-      <!-- ІКОНКИ -->
-      <!-- <ul class="team-icon__list">
+                <p class="team__text">Marketing</p>
+                <!-- ІКОНКИ -->
+                <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -355,12 +583,70 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/man3.jpg" alt="" width="270" height="260" />
+              <picture>
+                <!-- Mobile -->
+                <source
+                  media="(min-width: 320px)"
+                  srcset="
+                    ./images/team/man4_sm@1x.jpg 1x,
+                    ./images/team/man4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 320px)"
+                  srcset="
+                    ./images/team/man4_sm@1x.webp 1x,
+                    ./images/team/man4_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man4_md@1x.webp 1x,
+                    ./images/team/man4_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/man4_md@1x.jpg 1x,
+                    ./images/team/man4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man4@1x.webp 1x,
+                    ./images/team/man4@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/man4@1x.jpg 1x,
+                    ./images/team/man4@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/man4@1x.webp"
+                  alt=""
+
+                />
+              </picture>
               <div class="team-block">
                 <h3 class="team-name">Михайло Єрмаков</h3>
-                <p class="team__text">UI Designer</p> -->
-      <!-- ІКОНКИ -->
-      <!-- <ul class="team-icon__list">
+                <p class="team__text">UI Designer</p>
+                <!-- ІКОНКИ -->
+                <ul class="team-icon__list">
                   <li>
                     <a
                       href="https://www.instagram.com/"
@@ -414,7 +700,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- ПОСТІЙНІ КЛІЄНТИ -->
       <section class="clients section">
         <div class="container">
@@ -571,7 +857,7 @@
       </div>
     </footer>
     <!-- MODAL WINDOW -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg width="18" height="18">
@@ -653,7 +939,7 @@
           <button class="send-btn btn" type="submit">Відправити</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <!-- Mobile menu modal -->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-container-close__btn js-close-menu">
