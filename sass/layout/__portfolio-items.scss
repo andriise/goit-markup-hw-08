@@ -40,15 +40,21 @@
 
   &-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 30px;
-    padding: 0;
+
+    @media screen and (min-width: 768px) {
+      flex-wrap: wrap;
+    }
   }
 
   &-item {
     list-style: none;
-    width: calc((100% - 60px) / 3);
     padding: 0;
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 60px) / 3);
+    }
   }
 
   &-titles {
@@ -84,9 +90,14 @@
 .port-btns {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 .port-btn {
@@ -99,7 +110,7 @@
   line-height: calc(26 / 16);
   text-align: center;
   letter-spacing: 0.03em;
-  padding: 6px 22px;
+  padding: 6px 25px;
   border-radius: 4px;
   transition: color var(--anim), background-color var(--anim),
     box-shadow var(--anim);

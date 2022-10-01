@@ -84,12 +84,64 @@
               <li class="port-item">
                 <a href="" class="port-link">
                   <div class="port-anim">
-                    <img
-                      src="./images/portfolio/portfolio1.jpg"
-                      alt=""
-                      height="294"
-                      width="370"
-                    />
+                    <picture>
+                      <!-- Mobile -->
+                      <source
+                        media="(min-width: 320px)"
+                        srcset="
+                          ./images/team/portfolio1-sm@1x.jpg 1x,
+                          ./images/team/portfolio1-sm@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 320px)"
+                        srcset="
+                          ./images/team/portfolio1-sm@1x.webp 1x,
+                          ./images/team/portfolio1-sm@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <!-- Tablet -->
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/team/portfolio1-md@1x.webp 1x,
+                          ./images/team/portfolio1-md@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/team/portfolio1-md@1x.jpg 1x,
+                          ./images/team/portfolio1-md@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <!-- Desktop -->
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/team/portfolio1-lg@1x.webp 1x,
+                          ./images/team/portfolio1-lg@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/team/man1@1x.jpg 1x,
+                          ./images/team/man1@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/portfolio/portfolio1-lg@1x.jpg"
+                        alt=""
+                      />
+                    </picture>
+
                     <div class="port-overlay">
                       <p class="port-overlay__text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
