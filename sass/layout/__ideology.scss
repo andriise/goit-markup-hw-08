@@ -7,15 +7,6 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
-  }
-
-  &-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +15,13 @@
       justify-content: start;
     }
   }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 
   &__list {
     list-style: none;
