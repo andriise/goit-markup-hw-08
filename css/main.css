@@ -65,8 +65,6 @@ img {
   max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -579,19 +577,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-.ideology-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.ideology__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,6 +593,17 @@ img {
         -ms-flex-pack: start;
             justify-content: start;
   }
+}
+.ideology-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .ideology__list {
   list-style: none;
@@ -940,8 +936,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 60px 0;
-  min-width: 480px;
 }
 .footer-container {
   -webkit-box-align: baseline;
@@ -1222,6 +1220,11 @@ img {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .port-box--first {
+    height: 145px;
+  }
+}
 .port-anim {
   position: relative;
   overflow: hidden;
@@ -1273,6 +1276,10 @@ img {
 }
 @media screen and (min-width: 768px) {
   .port-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1281,9 +1288,14 @@ img {
   list-style: none;
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .port-item {
+    max-width: calc((100% - 30px) / 2);
+  }
+}
 @media screen and (min-width: 1200px) {
   .port-item {
-    width: calc((100% - 60px) / 3);
+    max-width: calc((100% - 60px) / 3);
   }
 }
 .port-titles {

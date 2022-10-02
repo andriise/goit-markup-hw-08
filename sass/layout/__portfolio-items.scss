@@ -4,6 +4,12 @@
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
+
+    &--first {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        height: 145px;
+      }
+    }
   }
 
   &-anim {
@@ -44,6 +50,7 @@
     gap: 30px;
 
     @media screen and (min-width: 768px) {
+      flex-direction: row;
       flex-wrap: wrap;
     }
   }
@@ -52,8 +59,12 @@
     list-style: none;
     padding: 0;
 
+    @media screen and (min-width: 768px) {
+      max-width: calc((100% - 30px) / 2);
+    }
+
     @media screen and (min-width: 1200px) {
-      width: calc((100% - 60px) / 3);
+      max-width: calc((100% - 60px) / 3);
     }
   }
 
