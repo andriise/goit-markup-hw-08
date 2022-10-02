@@ -90,7 +90,10 @@
 }
 
 .mobile-nav__link {
+  font-weight: 500;
   font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--dark-txt-clr);
   position: relative;
@@ -107,7 +110,10 @@
 }
 
 .mobile__link {
+  font-weight: 500;
   font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--grey-txt-clr);
   transition: color var(--anim);
@@ -124,6 +130,7 @@
 
 .mobile__tel {
   font-size: 34px;
+  color: var(--main-clr);
 }
 
 .mobile-thumb {
@@ -134,7 +141,7 @@
   display: flex;
   gap: 10px;
   margin-top: 64px;
-  justify-content: center;
+  justify-content: start;
 }
 
 .mobile-social {
@@ -156,5 +163,4 @@
   content: "";
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
-
 }

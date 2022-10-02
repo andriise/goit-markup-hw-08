@@ -83,7 +83,8 @@
     transition: border-color var(--anim);
   }
 
-  &-field:focus {
+  &-field:focus,
+  &-field:hover {
     border-color: var(--main-clr);
   }
 
@@ -104,7 +105,8 @@
     transition: fill var(--anim);
   }
 
-  &-field:focus ~ &-svg {
+  &-field:focus ~ &-svg,
+  &-field:hover ~ &-svg {
     fill: var(--main-clr);
   }
 
@@ -120,7 +122,8 @@
     transition: border-color var(--anim);
   }
 
-  &-area:focus {
+  &-area:focus,
+  &-area:hover{
     border-color: var(--main-clr);
   }
 
