@@ -1,17 +1,15 @@
 .subscribe {
-margin: 0 auto;
+  margin: 0 auto;
 
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-bottom: 60px;
+  }
 
-
-@media screen and (min-width: 768px) {
-  margin: 0;
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  margin: 0;
-  margin-right: auto;
-}
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    margin-right: auto;
+  }
 
   &__title {
     text-transform: uppercase;
