@@ -546,6 +546,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-lg.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-lg.jpg);
   }
@@ -981,9 +982,37 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 .footer-thumb {
@@ -1000,7 +1029,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-thumb {
@@ -1016,7 +1044,6 @@ img {
         -ms-flex-align: start;
             align-items: start;
     margin: 0;
-    margin-right: 93px;
   }
 }
 .footer__item:not(:last-child) {
@@ -1123,7 +1150,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 767px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .footer-mail {
@@ -1211,11 +1238,11 @@ img {
 
 .subscribe {
   margin: 0 auto;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .subscribe {
     margin: 0;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
