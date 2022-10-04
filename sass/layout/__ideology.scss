@@ -1,5 +1,7 @@
 .ideology {
-  padding-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
   &__title {
     font-weight: 700;
     font-size: 14px;
@@ -20,10 +22,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      padding-bottom: 60px;
-    }
   }
 
   &__list {

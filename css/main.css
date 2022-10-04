@@ -576,8 +576,10 @@ img {
   max-width: 216px;
 }
 
-.ideology {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .ideology {
+    padding-bottom: 0;
+  }
 }
 .ideology__title {
   font-weight: 700;
@@ -613,11 +615,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .ideology-container {
-    padding-bottom: 60px;
-  }
 }
 .ideology__list {
   list-style: none;
